@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/appname"
         android:paddingBottom="10dp"
+        android:backgroundTint="@color/ghost_white"
         android:outlineAmbientShadowColor="@color/black"
         app:cardElevation="10dp"
         android:paddingTop="10dp">
@@ -37,6 +38,7 @@
         android:layout_marginTop="20dp"
         android:outlineAmbientShadowColor="@color/black"
         app:cardElevation="10dp"
+        android:backgroundTint="@color/ghost_white"
         android:layout_marginLeft="10dp"
         app:cardCornerRadius="10dp"
         android:layout_marginRight="10dp">
@@ -345,7 +347,7 @@
         app:cardElevation="10dp"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
-        android:backgroundTint="@color/azure"
+        android:backgroundTint="@color/ghost_white"
         android:layout_marginRight="10dp"
         android:layout_alignParentBottom="true"
         app:cardCornerRadius="5dp"
@@ -375,7 +377,7 @@
                     android:text="Home"
                     android:layout_gravity="center"
                     android:textStyle="bold"
-                    android:textColor="@color/black"
+                    android:textColor="@color/dodger_blue"
                     android:letterSpacing="0.1"/>
 
             </LinearLayout>
