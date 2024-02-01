@@ -1,6 +1,16 @@
 <resources>
     <string name="app_name">Online Meeting App</string>
     <string name="reg">Register Now</string>
+    <string name="myprofile">My Profile</string>
+    <string name="profileph">Profile Photo</string>
+    <string name="account">Account</string>
+    <string name="accdes">xyz@gmail.com</string>
+    <string name="disname">Display Name</string>
+    <string name="disdes">Xyz</string>
+    <string name="uppass">Update Password</string>
+    <string name="pmi">Personal Meeting ID</string>
+    <string name="pmides">123456258</string>
+    <string name="signout">Sign Out</string>
     <string name="fname">Full Name</string>
     <string name="email">Email</string>
     <string name="mobile">Mobile No.</string>
