@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/alice_blue"
     tools:context=".HomePage">
 
     <androidx.cardview.widget.CardView
@@ -49,8 +50,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingTop="10dp"
-                android:paddingBottom="10dp"
-                >
+                android:paddingBottom="10dp">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -158,6 +158,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="130dp"
                 android:layout_height="150dp"
+                android:backgroundTint="@color/azure"
                 android:layout_margin="10dp"
                 app:cardElevation="5dp">
 
@@ -170,13 +171,15 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:padding="15dp" />
+                        android:padding="5dp"
+                        android:background="@drawable/circle_red"
+                        android:src="@drawable/vcadd"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/black" />
+                        android:background="@color/light_grey" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -197,6 +200,7 @@
                 android:id="@+id/cloth"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
+                android:backgroundTint="@color/azure"
                 android:layout_margin="10dp"
                 app:cardElevation="5dp">
 
@@ -209,13 +213,15 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:padding="15dp" />
+                        android:padding="5dp"
+                        android:background="@drawable/circle_red"
+                        android:src="@drawable/vc"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/black" />
+                        android:background="@color/light_grey" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -249,6 +255,7 @@
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/azure"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -260,13 +267,15 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:padding="15dp" />
+                        android:padding="5dp"
+                        android:background="@drawable/circle_red"
+                        android:src="@drawable/cal"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/black" />
+                        android:background="@color/light_grey" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -287,6 +296,7 @@
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
+                android:backgroundTint="@color/azure"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -298,13 +308,15 @@
                     <ImageView
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:padding="15dp" />
+                        android:padding="5dp"
+                        android:background="@drawable/circle_red"
+                        android:src="@drawable/baseline_account_circle_24"/>
 
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="1dp"
                         android:layout_marginTop="10dp"
-                        android:background="@color/black" />
+                        android:background="@color/light_grey" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -324,6 +336,123 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:backgroundTint="@color/azure"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="5dp"
+        android:outlineAmbientShadowColor="@color/black">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:paddingBottom="7dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/home"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/historydem"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Meetings"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/contactsdem"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Contcacts"
+                    android:textColor="@color/grey"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_density_medium_24"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:layout_gravity="center"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
 
 
