@@ -45,11 +45,20 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/topPanel"
+            >
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:id="@+id/linearTop"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_toStartOf="@+id/iconProfile"
                 android:orientation="horizontal"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp">
@@ -57,73 +66,71 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
-                    android:layout_gravity="center">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Hi,"
-                        android:textSize="26sp"
-                        android:letterSpacing="0.1"
-                        android:textColor="@color/black"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Username"
-                        android:id="@+id/username"
-                        android:textColor="@color/black"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.1"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="abc@xyz.com"
-                        android:id="@+id/emailid"
-                        android:textSize="20sp"
-                        android:letterSpacing="0.1"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"/>
-
-
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_marginRight="20dp"
-                    android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center"
-                        android:outlineAmbientShadowColor="@color/black"
-                        app:cardElevation="5dp"
-                        app:cardCornerRadius="100dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="Hi,"
+                        android:textColor="@color/black"
+                        android:textSize="25sp" />
 
-                        <ImageButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:backgroundTint="@color/white"
-                            android:src="@drawable/baseline_account_circle_24"
-                            android:scaleType="fitXY"/>
-
-                    </androidx.cardview.widget.CardView>
-
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:letterSpacing="0.1"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/emailid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text=""
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/iconProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:outlineAmbientShadowColor="@color/black"
+                    app:cardCornerRadius="100dp"
+                    app:cardElevation="5dp">
+
+                    <ImageButton
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:backgroundTint="@color/white"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/baseline_account_circle_24" />
+
+                </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>

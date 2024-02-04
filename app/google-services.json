@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "952270777156",
+    "project_id": "online-meeting-app-f06e5",
+    "storage_bucket": "online-meeting-app-f06e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:952270777156:android:e4a400507d0353c89b8511",
+        "android_client_info": {
+          "package_name": "com.example.onlinemeetingapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATyWdeIiy8foXE__TiisZDQousILHme6Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
