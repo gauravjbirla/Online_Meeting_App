@@ -24,4 +24,7 @@ public class Register extends Activity {
         }
     });
     }
+
+    public void Register(View view) {
+    }
 }
