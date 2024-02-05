@@ -30,6 +30,7 @@ public class Login extends AppCompatActivity {
     FirebaseUser firebaseUser;
     public static String get_DBName,get_DBEmail;
     FirebaseFirestore firestore;
+    String password,email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +41,7 @@ public class Login extends AppCompatActivity {
     mail=findViewById(R.id.mail);
     pass=findViewById(R.id.pass);
 
-    String email=mail.getText().toString().trim();
-    String password=pass.getText().toString().trim();
+
 
     firebaseAuth = FirebaseAuth.getInstance();
     firebaseUser = firebaseAuth.getCurrentUser();
@@ -60,8 +60,13 @@ public class Login extends AppCompatActivity {
         }
     });
     login.setOnClickListener(new View.OnClickListener() {
+
+
         @Override
         public void onClick(View v) {
+            email=mail.getText().toString().trim();
+            password=pass.getText().toString().trim();
+
             if (!email.matches(email_regex)) {
                 mail.setError("Enter correct Email");
             } else if (password.length() < 6) {
