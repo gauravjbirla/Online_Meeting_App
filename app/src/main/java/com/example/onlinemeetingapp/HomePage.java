@@ -23,7 +23,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class HomePage extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
-    LinearLayout meetings , contacts , settings;
+    private LinearLayout meetings , contacts , settings;
     TextView name, email;
     FirebaseFirestore db ;
     String username, useremail;
