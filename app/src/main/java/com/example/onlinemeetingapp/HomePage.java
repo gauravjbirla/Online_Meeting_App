@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,11 +23,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class HomePage extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
-
+    LinearLayout meetings , contacts , settings;
     TextView name, email;
     FirebaseFirestore db ;
     String username, useremail;
     CardView profile;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +38,33 @@ public class HomePage extends AppCompatActivity {
 
         name=(TextView) findViewById(R.id.username);
         email=(TextView) findViewById(R.id.emailid);
+        meetings=findViewById(R.id.meetings);
+        contacts=findViewById(R.id.contacts);
+        settings=findViewById(R.id.settings);
 
+        //Bottom Navigation
+        meetings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, Meetings.class));
+            }
+        });
+        contacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, Contacts.class));
+            }
+        });
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, Settings.class));
+            }
+        });
+
+
+
+        // User Authentication
         db= FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseUser = firebaseAuth.getCurrentUser();
