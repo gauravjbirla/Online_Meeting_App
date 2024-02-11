@@ -112,11 +112,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/accdes"
+                    android:id="@+id/emailid"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:layout_gravity="right"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
                     android:fontFamily="@font/roboto_mono"
                     />
 
@@ -159,11 +159,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/disdes"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
                     android:layout_gravity="right"
-                    android:textSize="24sp"
+                    android:textSize="20sp"
+                    android:id="@+id/name"
                     android:fontFamily="@font/roboto_mono"
                     />
 
@@ -186,32 +186,31 @@
                 app:cardBackgroundColor="@color/white"
 
                 app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                >
+                app:cardUseCompatPadding="true">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/uppass"
                         android:layout_marginTop="20dp"
                         android:layout_marginBottom="20dp"
-                        android:textSize="24sp"
-                        android:textStyle="bold"
                         android:fontFamily="@font/roboto_mono"
-                        />
+                        android:text="@string/uppass"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="20dp"
-                    android:layout_gravity="right"
-                    android:textSize="24sp"
                     android:fontFamily="@font/roboto_mono"
-                    />
+                    android:textSize="24sp" />
 
             </androidx.cardview.widget.CardView>
         </LinearLayout>
