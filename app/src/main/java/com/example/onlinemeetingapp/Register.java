@@ -10,8 +10,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -91,9 +93,10 @@ public class Register extends Activity {
                 @Override
                 public void onSuccess(AuthResult authResult) {
                     Toast.makeText(Register.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                    Intent intent=new Intent(Register.this,Login.class);
-                    startActivity(intent);
-                    finish();
+//                    Intent intent=new Intent(Register.this,Login.class);
+                    sendEmailverification();
+//                    startActivity(intent);
+//                    finish();
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -103,5 +106,26 @@ public class Register extends Activity {
             });
         }
     }
+    private void sendEmailverification()
+    {
+        FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
+        if (firebaseUser!=null) {
+            firebaseUser.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    Toast.makeText(getApplicationContext(), "Verification Email Sent to Registered Email,Veify to Login", Toast.LENGTH_LONG).show();
+                    firebaseAuth.signOut();
+                    finish();
+                    Intent intent = new Intent(Register.this, Login.class);
+                    startActivity(intent);
+                }
+            });
+        }
+        else {
+            Toast.makeText(getApplicationContext(),"Failed to Send Email",Toast.LENGTH_SHORT).show();
 
+
+        }
+
+    }
 }

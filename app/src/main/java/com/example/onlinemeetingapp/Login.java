@@ -85,7 +85,7 @@ public class Login extends AppCompatActivity {
                                     get_DBName=documentSnapshot.getString("Name");
                                     get_DBEmail=documentSnapshot.getString("Email");
 
-
+                                    checkmailverification();
                                     Toast.makeText(getApplicationContext(), "Login in Successful", Toast.LENGTH_SHORT).show();
 
                                     Intent intent = new Intent(Login.this, HomePage.class);
@@ -111,6 +111,24 @@ public class Login extends AppCompatActivity {
             }
         }
     });
+    }
+    private void checkmailverification()
+    {
+        FirebaseUser firebaseUser=firebaseAuth.getCurrentUser();
+
+        if (firebaseUser.isEmailVerified()==true)
+        {
+            Toast.makeText(getApplicationContext(),"Logged In",Toast.LENGTH_SHORT).show();
+            finish();
+//            startActivity(new Intent(Login.this, ChooseMode.class));
+            startActivity(new Intent(Login.this, HomePage.class));
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"Verify Your Email",Toast.LENGTH_SHORT).show();
+            firebaseAuth.signOut();
+        }
+
     }
 
 }
