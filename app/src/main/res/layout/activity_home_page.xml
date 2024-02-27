@@ -167,7 +167,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="130dp"
                 android:layout_height="150dp"
-                android:backgroundTint="@color/azure"
+                android:backgroundTint="@color/ghost_white"
                 android:layout_margin="10dp"
                 app:cardElevation="5dp">
 
@@ -175,6 +175,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:id="@+id/crtbtn"
                     android:orientation="vertical">
 
                     <ImageView
@@ -209,7 +210,7 @@
                 android:id="@+id/cloth"
                 android:layout_width="130dp"
                 android:layout_height="150dp"
-                android:backgroundTint="@color/azure"
+                android:backgroundTint="@color/ghost_white"
                 android:layout_margin="10dp"
                 app:cardElevation="5dp">
 
@@ -217,6 +218,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
+                    android:id="@+id/jnbtn"
                     android:orientation="vertical">
 
                     <ImageView
@@ -264,7 +266,7 @@
                 android:layout_width="130dp"
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="@color/azure"
+                android:backgroundTint="@color/ghost_white"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -306,7 +308,7 @@
                 android:layout_height="150dp"
                 android:layout_margin="10dp"
                 android:id="@+id/profilebtn"
-                android:backgroundTint="@color/azure"
+                android:backgroundTint="@color/ghost_white"
                 app:cardElevation="5dp">
 
                 <LinearLayout

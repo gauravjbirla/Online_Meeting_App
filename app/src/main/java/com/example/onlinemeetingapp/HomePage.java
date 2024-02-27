@@ -23,13 +23,15 @@ import com.google.firebase.firestore.FirebaseFirestore;
 public class HomePage extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
-    private LinearLayout meetings , contacts , settings;
+    private LinearLayout meetings , contacts , settings , crtbtn , jnbtn;
     TextView name, email;
     FirebaseFirestore db ;
     String username, useremail;
     CardView profile;
 
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,8 @@ public class HomePage extends AppCompatActivity {
         meetings=findViewById(R.id.meetings);
         contacts=findViewById(R.id.contacts);
         settings=findViewById(R.id.settings);
+        crtbtn=findViewById(R.id.crtbtn);
+        jnbtn=findViewById(R.id.jnbtn);
 
         //Bottom Navigation
         meetings.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +66,13 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
+        jnbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this,CreateMeeting.class));
+
+            }
+        });
 
 
         // User Authentication
