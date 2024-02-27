@@ -49,6 +49,11 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <service
+            android:name="org.jitsi.meet.sdk.ConnectionService"
+            android:exported="false">
+            <!-- Add any other attributes or intent filters as needed -->
+        </service>
     </application>
 
 </manifest>

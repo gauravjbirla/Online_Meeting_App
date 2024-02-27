@@ -41,5 +41,4 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     //jitsi
-    implementation("org.jitsi.react:jitsi-meet-sdk:8.2.2") { isTransitive=true }
-}
+    implementation("org.jitsi.react:jitsi-meet-sdk:2.9.0") { var transitive = true }}

@@ -4,7 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#0099ff</color>
 
-
+    <color name="amp_transparent">#00000000</color>
     <color name="grey">#808080</color>
     <color name="ivory">#FFFFF0</color>
     <color name="light_yellow">#FFFFE0</color>
