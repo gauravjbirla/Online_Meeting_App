@@ -73,6 +73,12 @@ public class HomePage extends AppCompatActivity {
 
             }
         });
+        crtbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, JitsiWebView.class));
+            }
+        });
 
 
         // User Authentication

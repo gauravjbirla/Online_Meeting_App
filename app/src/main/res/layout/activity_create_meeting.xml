@@ -38,7 +38,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Create Meeting"
+                    android:text="Join Meeting"
                     android:textSize="16sp"
                     android:gravity="center" />
 
@@ -59,16 +59,9 @@
                     android:layout_marginTop="10dp"
                     android:padding="12dp"
                     android:backgroundTint="@color/dodger_blue"
-                    android:text="Create" />
+                    android:text="Join" />
 
-                <Button
-                    android:id="@+id/share"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:padding="12dp"
-                    android:backgroundTint="@color/dodger_blue"
-                    android:text="Share Code" />
+
 
 
             </LinearLayout>

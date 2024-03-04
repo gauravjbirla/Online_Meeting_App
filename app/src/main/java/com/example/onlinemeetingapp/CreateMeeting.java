@@ -29,7 +29,7 @@ public class CreateMeeting extends AppCompatActivity {
 
         codebox=findViewById(R.id.codeBox);
         button=findViewById(R.id.button);
-        share=findViewById(R.id.share);
+
 
         URL serverurl;
 
@@ -51,9 +51,10 @@ public class CreateMeeting extends AppCompatActivity {
                 {
                     JitsiMeetConferenceOptions options =new JitsiMeetConferenceOptions.Builder()
                             .setRoom(text)
-                            .setFeatureFlag("invite.enable", false)
-                            .setFeatureFlag("welcomepage.enable", false)
+                            .setFeatureFlag("invite.enable", true)
+                            .setFeatureFlag("welcomepage.enable", true)
                             .setAudioMuted(false)
+                            .setFeatureFlag("participants.enabled",true)
                             .setVideoMuted(false)
                             .build();
                     JitsiMeetActivity.launch(CreateMeeting.this,options);
