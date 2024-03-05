@@ -28,7 +28,7 @@ public class CreateMeeting extends AppCompatActivity {
         setContentView(R.layout.activity_create_meeting);
 
         codebox=findViewById(R.id.codeBox);
-        button=findViewById(R.id.button);
+        button=findViewById(R.id.button1);
 
 
         URL serverurl;
@@ -62,15 +62,15 @@ public class CreateMeeting extends AppCompatActivity {
             }
         });
 
-        share.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent shareIntent= new Intent();
-                shareIntent.setAction(Intent.ACTION_SEND);
-                shareIntent.putExtra(Intent.EXTRA_TEXT,"Enter The Roomcode To Join Meeting : "+codebox);
-                shareIntent.setType("text/plain");
-                startActivity(shareIntent);
-            }
-        });
+//        share.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent shareIntent= new Intent();
+//                shareIntent.setAction(Intent.ACTION_SEND);
+//                shareIntent.putExtra(Intent.EXTRA_TEXT,"Enter The Roomcode To Join Meeting : "+codebox);
+//                shareIntent.setType("text/plain");
+//                startActivity(shareIntent);
+//            }
+//        });
     }
 }

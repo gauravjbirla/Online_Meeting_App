@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -19,6 +20,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.net.URL;
 
 public class HomePage extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
@@ -42,7 +45,6 @@ public class HomePage extends AppCompatActivity {
         email=(TextView) findViewById(R.id.emailid);
         meetings=findViewById(R.id.meetings);
         contacts=findViewById(R.id.contacts);
-        settings=findViewById(R.id.settings);
         crtbtn=findViewById(R.id.crtbtn);
         jnbtn=findViewById(R.id.jnbtn);
 
@@ -59,24 +61,19 @@ public class HomePage extends AppCompatActivity {
                 startActivity(new Intent(HomePage.this, Contacts.class));
             }
         });
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomePage.this, Settings.class));
-            }
-        });
 
         jnbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomePage.this,CreateMeeting.class));
-
             }
         });
         crtbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomePage.this, JitsiWebView.class));
+//                startActivity(new Intent(HomePage.this, JitsiWebView.class));
+                Uri uri= Uri.parse("https://meet.jit.si/");
+                startActivity(new Intent(Intent.ACTION_VIEW,uri));
             }
         });
 

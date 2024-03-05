@@ -111,7 +111,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="20dp"
                     android:layout_marginLeft="10dp"
                     android:orientation="vertical">
 
@@ -127,29 +126,6 @@
                         android:text="Contcacts"
                         android:textColor="@color/dodger_blue"
                         android:layout_gravity="center"
-                        android:textStyle="bold"
-                        android:letterSpacing="0.1"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/settings"
-                    android:layout_marginLeft="10dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
-                        android:padding="5dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/baseline_density_medium_24"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Settings"
-                        android:layout_gravity="center"
-                        android:textColor="@color/grey"
                         android:textStyle="bold"
                         android:letterSpacing="0.1"/>
 

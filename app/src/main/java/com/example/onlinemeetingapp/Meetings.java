@@ -18,7 +18,7 @@ public class Meetings extends AppCompatActivity {
 
         home=findViewById(R.id.nevhome);
         contacts=findViewById(R.id.contacts);
-        settings=findViewById(R.id.settings);
+
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,11 +32,6 @@ public class Meetings extends AppCompatActivity {
                 startActivity(new Intent(Meetings.this, Contacts.class));
             }
         });
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(Meetings.this, Settings.class));
-            }
-        });
+
     }
 }

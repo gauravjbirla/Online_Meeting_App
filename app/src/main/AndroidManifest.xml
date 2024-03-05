@@ -2,7 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -53,11 +59,11 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-        <service
-            android:name="org.jitsi.meet.sdk.ConnectionService"
-            android:exported="false">
-            <!-- Add any other attributes or intent filters as needed -->
-        </service>
+<!--        <service-->
+<!--            android:name="org.jitsi.meet.sdk.ConnectionService"-->
+<!--            android:exported="false">-->
+<!--            &lt;!&ndash; Add any other attributes or intent filters as needed &ndash;&gt;-->
+<!--        </service>-->
     </application>
 
 </manifest>
