@@ -10,6 +10,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +32,7 @@ public class HomePage extends AppCompatActivity {
     FirebaseFirestore db ;
     String username, useremail;
     CardView profile;
+    RelativeLayout topPanel;
 
 
 
@@ -47,6 +49,7 @@ public class HomePage extends AppCompatActivity {
         contacts=findViewById(R.id.contacts);
         crtbtn=findViewById(R.id.crtbtn);
         jnbtn=findViewById(R.id.jnbtn);
+        topPanel=findViewById(R.id.topPanel);
 
         //Bottom Navigation
         meetings.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +77,13 @@ public class HomePage extends AppCompatActivity {
 //                startActivity(new Intent(HomePage.this, JitsiWebView.class));
                 Uri uri= Uri.parse("https://meet.jit.si/");
                 startActivity(new Intent(Intent.ACTION_VIEW,uri));
+            }
+        });
+
+        topPanel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this, ProfileNew.class));
             }
         });
 
@@ -108,7 +118,7 @@ public class HomePage extends AppCompatActivity {
     profile.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            startActivity(new Intent(HomePage.this, Profile.class));
+            startActivity(new Intent(HomePage.this, ProfileNew.class));
         }
     });
     }
