@@ -112,7 +112,7 @@ public class Contacts extends AppCompatActivity {
 
     }
 
-    private void addDataToView(String name, String mobile, String email) {
+    private void addDataToView(String name, String mobile, String emailView) {
         cardview = new CardView(getApplicationContext());
         LinearLayout linearLayoutInner = new LinearLayout(getApplicationContext());
 
@@ -147,7 +147,7 @@ public class Contacts extends AppCompatActivity {
         textview.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_START);
         textview.setLayoutParams(layoutparams);
 
-        String text = "Name: " + name + "\nEmail: " + email + "\nMobile No:" + mobile;
+        String text = "Name: " + name + "\nEmail: " + emailView + "\nMobile No:" + mobile;
         textview.setText(text);
         textview.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
         textview.setTextColor(Color.BLACK);
@@ -192,7 +192,15 @@ public class Contacts extends AppCompatActivity {
         payment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //code is left of email.
+
+                String FROM=email;
+                String TO=emailView;
+
+                Intent send_mail=new Intent(Intent.ACTION_SEND);
+                send_mail.putExtra(Intent.EXTRA_EMAIL,new String[]{TO});
+
+                send_mail.setType("message/rfc822");
+                startActivity(Intent.createChooser(send_mail,"Choose an Email Client"));
             }
         });
         payment.setLayoutParams(layoutparams);
