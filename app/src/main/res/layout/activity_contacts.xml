@@ -37,10 +37,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/scrolhistory"
+            android:background="@color/gainsboro"
             android:layout_marginBottom="100dp"
             android:layout_below="@+id/appname">
 
-
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
         </ScrollView>
 
         <androidx.cardview.widget.CardView
