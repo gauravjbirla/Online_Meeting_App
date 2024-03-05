@@ -184,7 +184,7 @@ public class Contacts extends AppCompatActivity {
         call.setHapticFeedbackEnabled(true);
         call.setIcon(ContextCompat.getDrawable(this,R.drawable.baseline_call_24));
 
-        call.setBackgroundColor(getColor(R.color.dark_cyan));
+        call.setBackgroundColor(getColor(R.color.dark_green));
         call.setLetterSpacing(0.2f);
         call.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 18);
 
@@ -202,8 +202,7 @@ public class Contacts extends AppCompatActivity {
         payment.setHapticFeedbackEnabled(true);
         payment.setIcon(ContextCompat.getDrawable(this,R.drawable.baseline_email_24));
 
-        payment.setBackgroundColor(getColor(R.color.dark_cyan));
-        payment.setPadding(25,0,25,0);
+        payment.setBackgroundColor(getColor(R.color.dark_red));
         payment.setLetterSpacing(0.2f);
         LinearLayout linearbtn = new LinearLayout(getApplicationContext());
 
