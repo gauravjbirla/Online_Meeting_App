@@ -30,9 +30,6 @@
             android:name=".CreateMeeting"
             android:exported="false" />
         <activity
-            android:name=".Settings"
-            android:exported="false" />
-        <activity
             android:name=".Contacts"
             android:exported="false" />
         <activity
