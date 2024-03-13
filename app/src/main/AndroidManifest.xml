@@ -9,10 +9,12 @@
         android:name="android.hardware.telephony"
         android:required="true" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,6 +25,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.OnlineMeetingApp"
         tools:targetApi="31">
+        <activity
+            android:name=".ScheduleMeet"
+            android:exported="false" />
         <activity
             android:name=".JitsiWebView"
             android:exported="false" />
@@ -60,14 +65,11 @@
             </intent-filter>
         </activity>
 
+        <receiver android:name=".NotifReciever"/>
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-<!--        <service-->
-<!--            android:name="org.jitsi.meet.sdk.ConnectionService"-->
-<!--            android:exported="false">-->
-<!--            &lt;!&ndash; Add any other attributes or intent filters as needed &ndash;&gt;-->
-<!--        </service>-->
     </application>
 
 </manifest>

@@ -27,7 +27,7 @@ import java.net.URL;
 public class HomePage extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
-    private LinearLayout meetings , contacts , settings , crtbtn , jnbtn;
+    private LinearLayout meetings , contacts , settings , crtbtn , jnbtn , schedule;
     TextView name, email;
     FirebaseFirestore db ;
     String username, useremail;
@@ -50,6 +50,9 @@ public class HomePage extends AppCompatActivity {
         crtbtn=findViewById(R.id.crtbtn);
         jnbtn=findViewById(R.id.jnbtn);
         topPanel=findViewById(R.id.topPanel);
+        schedule=findViewById(R.id.schedule);
+
+
 
         //Bottom Navigation
         meetings.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +87,13 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomePage.this, ProfileNew.class));
+            }
+        });
+
+        schedule.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomePage.this,ScheduleMeet.class));
             }
         });
 
