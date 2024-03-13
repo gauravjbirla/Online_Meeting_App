@@ -9,7 +9,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,7 +22,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Meetings"
+                android:text="Recent Meetings"
                 android:textSize="24sp"
                 android:textColor="@color/dodger_blue"
                 android:textAlignment="center"
@@ -36,12 +35,20 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/scrolhistory"
+            android:id="@+id/scroll"
+            android:layout_below="@id/appname"
+            android:background="@color/floral_white"
             android:layout_marginBottom="100dp"
-            android:layout_below="@+id/appname">
+            >
 
-
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
         </ScrollView>
+
+
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

@@ -104,7 +104,7 @@ public class Contacts extends AppCompatActivity {
                         }
                     }
                 } catch (Exception e) {
-                    Toast.makeText(Contacts.this, "You don't have any rides", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Contacts.this, "Contacts is Empty", Toast.LENGTH_SHORT).show();
                 }
             }
         });
