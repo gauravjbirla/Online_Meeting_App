@@ -70,8 +70,8 @@ public class ProfileNew extends AppCompatActivity {
                     if (documentSnapshot.exists()) {
                         name = documentSnapshot.getString("Name");
 
-//                        mobile = documentSnapshot.getString("MobileNo");
-                        setEditTextValues(name, usmail);
+                        mobile = documentSnapshot.getString("MobileNo");
+                        setEditTextValues(name, usmail,mobile);
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -85,10 +85,10 @@ public class ProfileNew extends AppCompatActivity {
 
     }
 
-    private void setEditTextValues (String name, String uemail){
+    private void setEditTextValues (String name, String uemail, String mobile){
         uname.setText(name);
         email.setText(uemail);
-//        mob.setText(mobile);
+        mob.setText(mobile);
 
     }
 }

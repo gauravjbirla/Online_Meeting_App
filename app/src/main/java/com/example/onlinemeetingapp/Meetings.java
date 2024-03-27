@@ -12,6 +12,9 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.StyleSpan;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -114,7 +117,7 @@ public class Meetings extends AppCompatActivity {
         layoutparams.setMargins(10, 15, 10, 15);
         layoutparamstextview.setMargins(10, 15, 10, 15);
         //linearLayoutInner.setBackground(getDrawable(R.drawable.cardview_bg));
-        cardview.setCardBackgroundColor(getColor(R.color.salmon));
+        cardview.setCardBackgroundColor(getColor(R.color.amp_transparent));
 //        cardview.setCardBackgroundColor(Color.parseColor("#F8F8FF"));
 
         LinearLayout.LayoutParams layoutparamscardview = new LinearLayout.LayoutParams(
@@ -134,6 +137,10 @@ public class Meetings extends AppCompatActivity {
         textview.setLayoutParams(layoutparams);
 
         String text = "Meeting Id : \n" + doc + "\nTime: \n" + DateTime;
+        SpannableString ss = new SpannableString(text);
+        StyleSpan boldSpan = new StyleSpan(Typeface.BOLD);
+        ss.setSpan(boldSpan, 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
         textview.setText(text);
         Typeface typeface= ResourcesCompat.getFont(context,R.font.roboto_mono);
         textview.setTypeface(typeface,Typeface.BOLD);
